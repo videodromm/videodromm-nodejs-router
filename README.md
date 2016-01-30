@@ -2,6 +2,8 @@
 Routes OSC, MIDI, websocket messages to the clients (nodejs and Python)
 from https://github.com/colinbdclark/osc.js-examples/tree/master/udp-browser
 
+![Router](https://raw.github.com/videodromm/videodromm-nodejs-router/master/assets/vd-nodejs-router.png)
+
 # Bi-directional UDP <-> web browser example
 
 This example opens a Web Socket in a web page that communicates with a Node.js server.
