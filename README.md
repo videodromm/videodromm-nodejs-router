@@ -28,3 +28,6 @@ From the command line:
 ## Run http server (optional)
 1. python -m SimpleHTTPServer 8000
 2. Open in your browser: http://localhost:8000/
+
+![Mobile](https://raw.github.com/videodromm/videodromm-nodejs-router/master/assets/vd-mobile.png)
+
