@@ -3,7 +3,7 @@ from OSC import *
 from OSC import _readString, _readFloat, _readInt
 
 c = OSCClient()
-c.connect(('127.0.0.1',7400))
+c.connect(('127.0.0.1',9001))
 print c
 
 m = OSCMessage("/test")
