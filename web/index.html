@@ -6,10 +6,11 @@
         <link rel="stylesheet" type="text/css" media="all" href="osc-view.css"></link>
         <script src="bower_components/jquery/jquery.js"></script>
         <script src="bower_components/osc.js/dist/osc-browser.min.js"></script>
+        <script src="libs/nexusUI.js"></script>
         <script type="text/javascript">
 
             var port = new osc.WebSocketPort({
-                url: "ws://localhost:8081"
+                url: "ws://192.168.0.33:8081"
             });
 
             port.on("message", function (oscMessage) {
@@ -26,11 +27,29 @@
                 });
             };
 
+            nx.onload = function() {
+                
+                nx.colorize("accent", "#347");
+                nx.colorize("border", "#bbb");
+                nx.colorize("fill", "#eee");
+                    multislider1.on('*',function(data) {
+                        var a = data.list;
+                        console.log(a);
+                        port.send({
+                            address: "/slider",
+                            args: ["a"]
+                        });
+                    })
+                    multislider1.set({
+                        1: 0.5
+                    })
+             
+            }
         </script>
     </head>
 
     <body>
-        <h1>osc.js Web Socket Demo</h1>
+        <h1>Videodromm osc.js Web Socket</h1>
 
         <div id="messageArea">
             <p id="messageLabel">OSC Message:</p>
@@ -38,5 +57,17 @@
         </div>
 
         <button onclick="sayHello()">Send OSC message</button>
+        <canvas nx="dial"></canvas>
+        <style>
+            .nx {
+                float:left;
+                margin:5px;
+            }
+        </style>
+
+
+          <canvas nx="multislider" style="width:300px;height:100px"></canvas>
+
+          <div id="tester" style="clear:both"></div>
     </body>
 </html>

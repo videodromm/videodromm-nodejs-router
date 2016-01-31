@@ -24,3 +24,7 @@ From the command line:
 2. In <code>web</code> folder, open index.html in a web browser; a log message will be printed to the terminal when you have connected.
 3. To send an OSC message via UDP to the browser, run <code>python testSend.py</code> in a new terminal window; an OSC message should appear in the web browser window.
 4. To send an OSC message from the browser to the UDP socket, run <code>python testReceive.py</code>. This will start a Python-based UDP OSC server. Then in the browser, click the 'Send OSC message' button. An OSC message should appear in the terminal window where you ran testReceive.py.
+
+## Run http server (optional)
+1. python -m SimpleHTTPServer 8000
+2. Open in your browser: http://localhost:8000/
