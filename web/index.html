@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>osc.js Web Socket Demo</title>
+        <title>Videodromm osc.js Web Socket</title>
         <meta charset="UTF-8" />
         <link rel="stylesheet" type="text/css" media="all" href="osc-view.css"></link>
         <script src="bower_components/jquery/jquery.js"></script>
@@ -36,14 +36,29 @@
                         var a = data.list;
                         console.log(a);
                         port.send({
-                            address: "/slider",
-                            args: ["a"]
+                            address: "/multislider",
+                            args: a
                         });
                     })
                     multislider1.set({
                         1: 0.5
                     })
-             
+                    dial1.on('*',function(data) {
+                        var a = data;
+                        console.log(a);
+                        port.send({
+                            address: "/dial",
+                            args: a.value
+                        });
+                    })
+                    dial3.on('*',function(data) {
+                        var a = data;
+                        console.log(a);
+                        port.send({
+                            address: "/dial3",
+                            args: a.value
+                        });
+                    })
             }
         </script>
     </head>
@@ -58,6 +73,7 @@
 
         <button onclick="sayHello()">Send OSC message</button>
         <canvas nx="dial"></canvas>
+        <canvas id="dial3" nx="dial"></canvas>
         <style>
             .nx {
                 float:left;

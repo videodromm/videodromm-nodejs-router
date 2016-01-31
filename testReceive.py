@@ -6,6 +6,9 @@ if __name__ == "__main__":
 
 	s = OSCServer(("127.0.0.1", 7500), return_port=7500)
 	s.addMsgHandler("/hello", s.msgPrinter_handler)
+	s.addMsgHandler("/multislider", s.msgPrinter_handler)
+	s.addMsgHandler("/dial", s.msgPrinter_handler)
+	s.addMsgHandler("/dial3", s.msgPrinter_handler)
 
 	print s
 
