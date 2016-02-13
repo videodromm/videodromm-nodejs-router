@@ -17,6 +17,7 @@ From the command line:
 2. In the <code>web</code> folder, run <code>bower install</code>
 3. Use [pip](https://pypi.python.org/pypi/pip) to install pyosc: <code>sudo pip install pyosc --pre</code>
 ** On Mac OS X, pip can be easily installed using the command <code>sudo easy_install pip</code>.
+4. Use [pip](https://pypi.python.org/pypi/pip) to install colorama <code>sudo pip install colorama</code>
 
 ## Running the Demo
 

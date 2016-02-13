@@ -10,7 +10,7 @@
         <script type="text/javascript">
 
             var port = new osc.WebSocketPort({
-                url: "ws://192.168.0.33:8081"
+                url: "ws://192.168.0.32:8081"
             });
 
             port.on("message", function (oscMessage) {
@@ -59,6 +59,14 @@
                             args: a.value
                         });
                     })
+                    backgroundcolor.on('*',function(data) {
+                       
+                        console.log(data.r);
+                        port.send({
+                            address: "/backgroundcolor",
+                            args: [data.r,data.g,data.b]
+                        });
+                    })
             }
         </script>
     </head>
@@ -81,7 +89,7 @@
             }
         </style>
 
-
+            <canvas id="backgroundcolor" nx="colors"></canvas>
           <canvas nx="multislider" style="width:300px;height:100px"></canvas>
 
           <div id="tester" style="clear:both"></div>
