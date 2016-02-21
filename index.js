@@ -53,6 +53,6 @@ wss.on("connection", function (socket) {
     });
 
     var relay = new osc.Relay(udp, socketPort, {
-        raw: true
+        raw: false
     });
 });
