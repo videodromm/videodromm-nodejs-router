@@ -13,6 +13,12 @@ if __name__ == "__main__":
 	s.addMsgHandler("/multislider", s.msgPrinter_handler)
 	s.addMsgHandler("/dial", s.msgPrinter_handler)
 	s.addMsgHandler("/dial3", s.msgPrinter_handler)
+	s.addMsgHandler("/Freq1", s.msgPrinter_handler)
+	s.addMsgHandler("/tempo", s.msgPrinter_handler)
+	s.addMsgHandler("/ticks", s.msgPrinter_handler)
+	s.addMsgHandler("/beat", s.msgPrinter_handler)
+	s.addMsgHandler("/play", s.msgPrinter_handler)
+	s.addMsgHandler("/bar", s.msgPrinter_handler)
 	s.addMsgHandler("/backgroundcolor", s.msgPrinter_handler)
 
 	print(Fore.CYAN + "Ready")
