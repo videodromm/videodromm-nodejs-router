@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>HTML5 File Drag &amp; Drop API</title>
+<link rel="stylesheet" type="text/css" media="all" href="styles.css" />
+
+<script type="text/javascript">
+	
+	function myFunction() 
+	{
+    	var divContainer = document.getElementById("container");
+    	//var divContent = document.getElementById("divContent");
+    	var i = 0 ;
+		var myimg = divContainer.getElementsByTagName('img')[0];
+		var mysrc = myimg.src;
+		
+		var elem = document.createElement("img");
+		elem.src = ''+mysrc+'';
+		elem.setAttribute("height", "200");
+		elem.setAttribute("width", "300");
+		elem.setAttribute("alt", "Flower");
+		elem.draggable=true;
+		document.getElementById("divContent").appendChild(elem);
+		i++ ;
+		
+		
+	}
+</script>
+</head>
+<body>
+
+<h1> Drag &amp; Drop Test </h1>
+
+
+
+<form id="upload" action="images.html" method="POST" enctype="multipart/form-data">
+
+<fieldset>
+<legend>HTML File Upload</legend>
+
+<input type="hidden" id="MAX_FILE_SIZE" name="MAX_FILE_SIZE" value="300000" />
+
+<div>
+	<label for="fileselect">Files to upload:</label>
+	<input type="file" id="fileselect" name="fileselect[]" multiple="multiple" />
+	<div id="filedrag"> drop files here</div>	
+</div>
+
+<div id="submitbutton">
+	<button type="submit">Upload Files</button>
+</div>
+
+</fieldset>
+
+</form>
+
+<div id="container">
+</div>
+<button onclick="myFunction()"> make to second div </button>
+
+<div id="divContent" draggable="true">
+
+</div>
+
+<script src="js/filedrag.js"></script>
+</body>
+</html>

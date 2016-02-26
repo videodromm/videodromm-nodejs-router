@@ -29,7 +29,7 @@
 }
 #divContent
 {
-  border:5px dashed gray;
+  
    background-color:blue;
 }
 #divParent
@@ -38,5 +38,5 @@
 	background-color:#A9A9A9;
 	width:600px;
 	height:500px;
-	
+	border:5px dashed gray;
 }
