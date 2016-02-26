@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>	
+		</title>
+		<link rel="stylesheet" type="text/css" href="osc-view.css">
+	</head>
+	<body>
+		<h1>Test Gedit </h1>
+		<div id="divParent">
+			<div id="divContent">
+			<p> Drag and Drope your picture hier </P>
+			</div>
+		</div>
+	</body>
+</html>
